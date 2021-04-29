@@ -1,0 +1,170 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Jenny Werner Illustration</title>
+    <meta name="author" content="Norman Köhring" />
+    <meta name="DC.title" content="Jenny Werner Illustration" />
+    <meta name="description" content="Jenny Werners Portfolio Page" />
+    <meta name="geo.region" content="DE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:url" content="https://jenillu.art">
+    <meta property="og:title" content="Jenny Werner Illustration">
+    <meta property="og:description" content="Jenny Werners Portfolio Page">
+    <meta property="og:image" content="/assets/thumbnail.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
+    <style>
+      :root {
+        --dark: #06112d;
+        --bright: #ffffff;
+        --shade: #7d8391;
+        --width: 72rem;
+        --spacing: 2rem;
+      }
+
+      body {
+        display: block;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background: var(--dark) url(/assets/wallpaper.png) center no-repeat fixed;
+        background-size: contain;
+        color: white;
+        font-size: 10px;
+      }
+
+      main {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: stretch;
+        width: calc(100vw - 2 * var(--spacing));
+        height: calc(100vh - var(--spacing));
+        max-width: var(--width);
+        overflow: hidden;
+        margin: auto;
+        font-family: Arial, Helvetica, sans, sans-serif;
+        font-size: 1.6rem;
+      }
+
+      main > header {
+        margin: var(--spacing) 0;
+        padding: .5rem 0 0 .5rem;
+        background: var(--bright);
+      }
+      main > header > .wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        height: 10rem;
+        border-top: .5rem solid var(--dark);
+        overflow: hidden;
+      }
+
+      main > header > .wrapper > .separator {
+        flex: 0 1 var(--width);
+        margin: 0 -22% 0 0;
+        height: .5rem;
+        background: var(--bright);
+        border-top: 1rem solid var(--dark);
+        border-bottom: 2rem solid var(--dark);
+        transform: rotate(-18deg);
+      }
+
+      #feather {
+        margin: 2rem 1rem 1rem 1rem;
+      }
+
+      .content-wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        height: 100%;
+      }
+
+      .content-wrapper > aside {
+        flex: 0 1 20%;
+        margin-right: var(--spacing);
+        background: var(--bright);
+      }
+
+      #content {
+        flex: 1 1 100%;
+        background: var(--shade);
+      }
+
+      main > footer {
+        display: block;
+        height: 4rem;
+        margin-top: var(--spacing);
+        font-size: 1.6rem;
+        text-align: right;
+      }
+
+      .copyright {
+        margin-right: .5em;
+      }
+
+      .social-media-icon {
+        display: inline-block;
+        height: 1.6rem;
+        vertical-align: top;
+      }
+      .social-media-icon:hover {
+        filter: invert() drop-shadow(0 0 5px var(--bright));
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <header>
+        <div class="wrapper">
+          <img id="logo" src="/assets/logo.svg" alt="Logo: an illustration of an owl" />
+          <div class="separator"></div>
+          <img id="feather" src="/assets/feather.svg" alt="an illustration of a feather" />
+        </div>
+      </header>
+
+      <div class="content-wrapper">
+        <aside>
+          <menu>
+                                    <li><a href="/about">About</a></li>
+                                                <li><a href="/contact">Contact</a></li>
+                                                <li class="stretch">&nbsp;</li>
+                                                <li><a href="/comic-art">Comic Art</a></li>
+                                                <li><a href="/portraits">Portraits</a></li>
+                                                <li><a href="/painting">Painting</a></li>
+                                                <li><a href="/pixel-art">Pixel Art</a></li>
+                                                <li><a href="/traditional">Traditional</a></li>
+                                                <li><a href="/sewing">Sewing</a></li>
+                                                <li><a href="/various">Various</a></li>
+                                <menu>
+        </aside>
+        <div id="content">
+        </div>
+      </div>
+
+      <footer>
+        <span class="copyright">© 2021 Jenny Werner Illustration</span>
+                  <a href="https://discord.gg/ZMr2TkerxJ" target="_blank" title="discord" rel="noopener">
+            <img class="social-media-icon" src="/assets/icon-discord.png" alt="discord logo" />
+          </a>
+                  <a href="https://t.me/jennywernerillustrations" target="_blank" title="telegram" rel="noopener">
+            <img class="social-media-icon" src="/assets/icon-telegram.png" alt="telegram logo" />
+          </a>
+                  <a href="https://twitter.com/jennywernerillu" target="_blank" title="twitter" rel="noopener">
+            <img class="social-media-icon" src="/assets/icon-twitter.png" alt="twitter logo" />
+          </a>
+                  <a href="https://ko-fi.com/jennywernerillustration" target="_blank" title="kofi" rel="noopener">
+            <img class="social-media-icon" src="/assets/icon-kofi.png" alt="kofi logo" />
+          </a>
+                  <a href="https://www.instagram.com/jennywernerillustration" target="_blank" title="instagram" rel="noopener">
+            <img class="social-media-icon" src="/assets/icon-instagram.png" alt="instagram logo" />
+          </a>
+              </footer>
+
+    </main>
+  </body>
+</html>

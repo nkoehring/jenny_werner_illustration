@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title><%= it.page.title %></title>
+    <meta name="author" content="Norman Köhring" />
+    <meta name="DC.title" content="<%= it.page.title %>" />
+    <meta name="description" content="<%= it.page.description %>" />
+    <meta name="geo.region" content="DE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:url" content="<%= it.page.url %>">
+    <meta property="og:title" content="<%= it.page.title %>">
+    <meta property="og:description" content="<%= it.page.description %>">
+    <meta property="og:image" content="/assets/thumbnail.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
+    <style>
+      :root {
+        --dark: <%= it.cssVars.dark %>;
+        --bright: <%= it.cssVars.bright %>;
+        --shade: <%= it.cssVars.shade %>;
+        --width: <%= it.cssVars.width %>;
+        --spacing: <%= it.cssVars.spacing %>;
+      }
+
+      body {
+        display: block;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background: var(--dark) url(/assets/wallpaper.png) center no-repeat fixed;
+        background-size: contain;
+        color: white;
+        font-size: 10px;
+      }
+
+      main {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: stretch;
+        width: calc(100vw - 2 * var(--spacing));
+        height: calc(100vh - var(--spacing));
+        max-width: var(--width);
+        overflow: hidden;
+        margin: auto;
+        font-family: Arial, Helvetica, sans, sans-serif;
+        font-size: 1.6rem;
+      }
+
+      main > header {
+        margin: var(--spacing) 0;
+        padding: .5rem 0 0 .5rem;
+        background: var(--bright);
+      }
+      main > header > .wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        height: 10rem;
+        border-top: .5rem solid var(--dark);
+        overflow: hidden;
+      }
+
+      main > header > .wrapper > .separator {
+        flex: 0 1 var(--width);
+        margin: 0 -22% 0 0;
+        height: .5rem;
+        background: var(--bright);
+        border-top: 1rem solid var(--dark);
+        border-bottom: 2rem solid var(--dark);
+        transform: rotate(-18deg);
+      }
+
+      #feather {
+        margin: 2rem 1rem 1rem 1rem;
+      }
+
+      .content-wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        height: 100%;
+      }
+
+      .content-wrapper > aside {
+        flex: 0 1 20%;
+        margin-right: var(--spacing);
+        background: var(--bright);
+      }
+
+      #content {
+        flex: 1 1 100%;
+        background: var(--shade);
+      }
+
+      main > footer {
+        display: block;
+        height: 4rem;
+        margin-top: var(--spacing);
+        font-size: 1.6rem;
+        text-align: right;
+      }
+
+      .copyright {
+        margin-right: .5em;
+      }
+
+      .social-media-icon {
+        display: inline-block;
+        height: 1.6rem;
+        vertical-align: top;
+      }
+      .social-media-icon:hover {
+        filter: invert() drop-shadow(0 0 5px var(--bright));
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <header>
+        <div class="wrapper">
+          <img id="logo" src="/assets/logo.svg" alt="Logo: an illustration of an owl" />
+          <div class="separator"></div>
+          <img id="feather" src="/assets/feather.svg" alt="an illustration of a feather" />
+        </div>
+      </header>
+
+      <div class="content-wrapper">
+        <aside>
+          <menu>
+          <% for (item of it.menu) { %>
+            <% if (item.type === 'entry') { %>
+              <li><a href="<%= item.url %>"><%= item.name %></a></li>
+            <% } else { %>
+              <li class="stretch">&nbsp;</li>
+            <% } %>
+          <% } %>
+          <menu>
+        </aside>
+        <div id="content">
+        </div>
+      </div>
+
+      <footer>
+        <span class="copyright"><%= it.page.footer %></span>
+        <% for (icon of it.social) { %>
+          <a href="<%= icon.url %>" target="_blank" title="<%= icon.name %>" rel="noopener">
+            <img class="social-media-icon" src="/assets/icon-<%= icon.name %>.png" alt="<%= icon.name %> logo" />
+          </a>
+        <% } %>
+      </footer>
+
+    </main>
+  </body>
+</html>
