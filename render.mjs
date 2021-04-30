@@ -19,7 +19,8 @@ async function render() {
       spacing: '2rem'
     },
     page: {
-      url: 'https://jenillu.art',
+      // url: 'https://jenillu.art',
+      url: 'https://sharp-colden-61c14c.netlify.app',
       title: 'Jenny Werner Illustration',
       description: 'Jenny Werners Portfolio Page',
       footer: '© 2021 Jenny Werner Illustration'

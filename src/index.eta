@@ -8,13 +8,13 @@
     <meta name="geo.region" content="DE" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta property="og:url" content="<%= it.page.url %>">
-    <meta property="og:title" content="<%= it.page.title %>">
-    <meta property="og:description" content="<%= it.page.description %>">
-    <meta property="og:image" content="/assets/thumbnail.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@jennywernerillu">
     <meta name="twitter:creator" content="@jennywernerillu">
+    <meta property="og:url" content="<%= it.page.url %>">
+    <meta property="og:title" content="<%= it.page.title %>">
+    <meta property="og:description" content="<%= it.page.description %>">
+    <meta property="og:image" content="<%= it.page.url %>/assets/thumbnail.png">
 
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
     <style>
