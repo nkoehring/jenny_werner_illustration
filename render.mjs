@@ -14,7 +14,7 @@ async function render() {
       dark: '#06112d',
       bright: '#ffffff',
       shade: '#7d8391',
-      width: '72rem',
+      width: '62rem',
       spacing: '2rem'
     },
     page: {

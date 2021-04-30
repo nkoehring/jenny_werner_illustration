@@ -65,7 +65,7 @@
 
       main > header > .wrapper > .separator {
         flex: 0 1 var(--width);
-        margin: 0 -22% 0 0;
+        margin: 5px -33% 0 0;
         height: .5rem;
         background: var(--bright);
         border-top: 1rem solid var(--dark);
