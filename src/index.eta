@@ -33,6 +33,7 @@
         --width: <%= it.cssVars.width %>;
         --spacing: <%= it.cssVars.spacing %>;
         --menu-width: <%= it.cssVars.menuWidth %>;
+        font-size: 10px;
       }
 
       body {
@@ -44,7 +45,8 @@
         background: var(--dark) url(/assets/wallpaper.png) center no-repeat fixed;
         background-size: contain;
         color: white;
-        font-size: 10px;
+        font-family: Cantarell, sans, sans-serif;
+        font-size: 2rem;
       }
 
       main {
@@ -56,8 +58,6 @@
         max-width: var(--width);
         overflow: hidden;
         margin: auto;
-        font-family: Cantarell, sans, sans-serif;
-        font-size: 1.6rem;
       }
 
       main > header {
@@ -106,7 +106,6 @@
         height: 100%;
         margin: 0;
         padding: .5rem .5rem .5rem .2rem;
-        font-size: 1.4rem;
         font-weight: bold;
       }
 
@@ -128,8 +127,26 @@
       }
 
       #content {
+        position: relative;
         flex: 1 1 100%;
         background: var(--shade);
+        overflow-y: auto;
+      }
+
+      #content > section {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 100%;
+        margin: 0 2rem;
+        background: var(--shade);
+      }
+      #content > section:target {
+        display: block;
+      }
+      #content > section:first-of-type{
+        display: block;
       }
 
       main > footer {
@@ -169,15 +186,26 @@
         <aside>
           <menu>
           <% for (item of it.menu) { %>
-            <% if (item.type === 'entry') { %>
-              <li class="entry"><a href="<%= item.url %>"><%= item.name %></a></li>
-            <% } else { %>
+            <% if (item.type === 'separator') { %>
               <li class="stretch">&nbsp;</li>
+            <% } else { %>
+              <li class="entry"><a href="/#<%= item.slug %>"><%= item.name %></a></li>
             <% } %>
           <% } %>
           <menu>
         </aside>
         <div id="content">
+          <% for (item of it.menu) { %>
+            <% if (item.type === 'page') { %>
+              <section name="<%= item.slug %>" id="<%= item.slug %>">
+                <%~ includeFile(`_${item.slug}`) %>
+              </section>
+            <% } else if (item.type === 'gallery') { %>
+              <section name="<%= item.slug %> gallery" id="<%= item.slug %>">
+                <%~ includeFile('_gallery', { name: item.slug }) %>
+              </section>
+            <% } %>
+          <% } %>
         </div>
       </div>
 

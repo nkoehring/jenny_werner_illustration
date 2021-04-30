@@ -14,9 +14,9 @@ async function render() {
       dark: '#06112d',
       bright: '#ffffff',
       shade: '#7d8391',
-      width: '62rem',
+      width: '99rem',
       menuWidth: '18%',
-      spacing: '2rem'
+      spacing: '3rem'
     },
     page: {
       // url: 'https://jenillu.art',
@@ -26,16 +26,16 @@ async function render() {
       footer: '© 2021 Jenny Werner Illustration'
     },
     menu: [
-      { type: 'entry', name: 'About', url: '/about'},
-      { type: 'entry', name: 'Contact', url: '/contact'},
+      { type: 'page', name: 'About', slug: 'about'},
+      { type: 'page', name: 'Contact', slug: 'contact'},
       { type: 'separator' },
-      { type: 'entry', name: 'Comic Art', url: '/comic-art'},
-      { type: 'entry', name: 'Portraits', url: '/portraits'},
-      { type: 'entry', name: 'Painting', url: '/painting'},
-      { type: 'entry', name: 'Pixel Art', url: '/pixel-art'},
-      { type: 'entry', name: 'Traditional', url: '/traditional'},
-      { type: 'entry', name: 'Sewing', url: '/sewing'},
-      { type: 'entry', name: 'Various', url: '/various'},
+      { type: 'gallery', name: 'Comic Art', slug: 'comic-art'},
+      { type: 'gallery', name: 'Portraits', slug: 'portraits'},
+      { type: 'gallery', name: 'Painting', slug: 'painting'},
+      { type: 'gallery', name: 'Pixel Art', slug: 'pixel-art'},
+      { type: 'gallery', name: 'Traditional', slug: 'traditional'},
+      { type: 'gallery', name: 'Sewing', slug: 'sewing'},
+      { type: 'gallery', name: 'Various', slug: 'various'},
       { type: 'separator' }
     ],
     social: [
