@@ -15,6 +15,7 @@ async function render() {
       bright: '#ffffff',
       shade: '#7d8391',
       width: '62rem',
+      menuWidth: '18%',
       spacing: '2rem'
     },
     page: {
@@ -33,7 +34,8 @@ async function render() {
       { type: 'entry', name: 'Pixel Art', url: '/pixel-art'},
       { type: 'entry', name: 'Traditional', url: '/traditional'},
       { type: 'entry', name: 'Sewing', url: '/sewing'},
-      { type: 'entry', name: 'Various', url: '/various'}
+      { type: 'entry', name: 'Various', url: '/various'},
+      { type: 'separator' }
     ],
     social: [
       { name: 'discord', url: 'https://discord.gg/ZMr2TkerxJ' },

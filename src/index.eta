@@ -16,12 +16,21 @@
 
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
     <style>
+      @font-face {
+        font-family: 'Cantarell';
+        src: url('/assets/cantarell.woff2') format('woff2'),
+        url('/assets/cantarell.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
       :root {
         --dark: <%= it.cssVars.dark %>;
         --bright: <%= it.cssVars.bright %>;
         --shade: <%= it.cssVars.shade %>;
         --width: <%= it.cssVars.width %>;
         --spacing: <%= it.cssVars.spacing %>;
+        --menu-width: <%= it.cssVars.menuWidth %>;
       }
 
       body {
@@ -45,7 +54,7 @@
         max-width: var(--width);
         overflow: hidden;
         margin: auto;
-        font-family: Arial, Helvetica, sans, sans-serif;
+        font-family: Cantarell, sans, sans-serif;
         font-size: 1.6rem;
       }
 
@@ -84,9 +93,36 @@
       }
 
       .content-wrapper > aside {
-        flex: 0 1 20%;
+        flex: 0 1 var(--menu-width);
         margin-right: var(--spacing);
         background: var(--bright);
+      }
+
+      .content-wrapper > aside > menu {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+        margin: 0;
+        padding: .5rem .5rem .5rem .2rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+
+      .content-wrapper > aside a {
+        color: var(--dark);
+        text-decoration: none;
+        line-height: 1.5;
+      }
+
+      .content-wrapper > aside li {
+        border-right: 4px solid var(--dark);
+      }
+      .content-wrapper > aside li.entry {
+        padding-left: .2rem;
+        border-bottom: 3px solid var(--dark);
+      }
+      .content-wrapper > aside li.stretch {
+        height: 100%;
       }
 
       #content {
@@ -132,7 +168,7 @@
           <menu>
           <% for (item of it.menu) { %>
             <% if (item.type === 'entry') { %>
-              <li><a href="<%= item.url %>"><%= item.name %></a></li>
+              <li class="entry"><a href="<%= item.url %>"><%= item.name %></a></li>
             <% } else { %>
               <li class="stretch">&nbsp;</li>
             <% } %>
