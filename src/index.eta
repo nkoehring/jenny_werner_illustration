@@ -33,6 +33,9 @@
         --width: <%= it.cssVars.width %>;
         --spacing: <%= it.cssVars.spacing %>;
         --menu-width: <%= it.cssVars.menuWidth %>;
+        --header-height: 17rem;
+        --footer-height: 4rem;
+        --main-height: calc(100vh - var(--header-height) - var(--footer-height) - 3*var(--spacing));
         font-size: 10px;
       }
 
@@ -69,7 +72,7 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        height: 17rem;
+        height: var(--header-height);
         border-top: .5rem solid var(--dark);
         overflow: hidden;
       }
@@ -91,7 +94,7 @@
       .content-wrapper {
         display: flex;
         flex-flow: row nowrap;
-        height: 100%;
+        height: var(--main-height);
       }
 
       .content-wrapper > aside {
@@ -127,21 +130,17 @@
       }
 
       #content {
-        position: relative;
-        flex: 1 1 100%;
+        flex: 0 1 auto;
+        width: 100%;
+        height: 100%;
         background: var(--shade);
-        overflow-y: auto;
+        overflow: auto;
       }
 
       #content > section {
         display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
         width: calc(100% - 4rem);
-        min-height: 100%;
         margin: 0 2rem;
-        background: var(--shade);
       }
       #content > section:target, #content > section.index {
         display: block;
@@ -155,12 +154,12 @@
         margin: 0;
       }
       #content input {
-        position: absolute;
+        display: none;
       }
 
       main > footer {
         display: block;
-        height: 4rem;
+        height: var(--footer-height);
         margin-top: var(--spacing);
         font-size: 1.6rem;
         text-align: right;
@@ -180,7 +179,6 @@
       }
 
       .gallery-page {
-        position: absolute;
         display: grid;
         grid-template-columns: repeat(<%= it.galleryOptions.cols %>, 1fr);
         grid-template-rows: repeat(<%= it.galleryOptions.rows %>, 1fr);
@@ -192,7 +190,6 @@
         background: inherit;
       }
       .thumbnail {
-        position: relative;
         display: block;
         width: 60%;
         background-color: rgba(0, 0, 0, .1);
@@ -203,7 +200,6 @@
       }
       .gallery-stage {
         display: none;
-        position: absolute;
         top: .1rem;
         left: .2rem;
         width: 90vw;
