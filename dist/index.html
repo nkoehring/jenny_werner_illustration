@@ -154,7 +154,7 @@
         height: 100%;
         margin: 0;
       }
-      #content input {
+      #content input[type="radio"] {
         display: none;
       }
 
@@ -190,6 +190,7 @@
         height: 100%;
         background: inherit;
       }
+
       .thumbnail {
         display: block;
         width: 60%;
@@ -198,17 +199,59 @@
       }
       .thumbnail > img {
         width: 100%;
+        cursor: pointer;
       }
       .gallery-stage {
         display: none;
+        position: absolute;
         top: .1rem;
         left: .2rem;
-        width: 90vw;
-        height: 90vh;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, .9);
         z-index: 1;
       }
-      .gallery-page input:checked + .gallery-stage {
+      input:checked + .gallery-stage {
         display: block;
+      }
+
+      .gallery-stage-wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        height: 100%;
+      }
+
+      .gallery-stage-wrapper > .column {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+      }
+      .gallery-stage-wrapper > .column.center {
+        flex: 0 0 auto;
+        width: 80vw;
+      }
+      .gallery-stage-wrapper > .column.center > img {
+        height: 100%;
+      }
+
+      .gallery-stage-wrapper label {
+        width: 100%;
+        text-align: center;
+        line-height: 10rem;
+        height: 10rem;
+        cursor: pointer;
+      }
+      .gallery-stage-wrapper label:hover {
+        background: var(--dark);
+      }
+      .gallery-stage-wrapper .close {
+        position: absolute;
+        top: 2rem;
+        width: 10rem;
       }
     </style>
   </head>
@@ -253,76 +296,164 @@
                     <div class="gallery-page gallery-page-0 from-0-to-9">
                                 <label class="thumbnail">
           <img src="/assets/img/comic-art/t_img01.jpg" alt="foo1" />
+          <input type="radio" name="gallery" id="comic-art.img01" />
+          <div class="gallery-stage">
+            <div class="gallery-stage-wrapper">
+              <div class="left column">
+                            </div>
+              <div class="center column">
+                <img src="/assets/img/comic-art/img01.jpg" alt="foo1" />
+              </div>
+              <div class="right column">
+              <label for="no-selection" class="close">❌</label>
+                              <label for="comic-art.img02" class="next">▶</label>
+                            </div>
+            </div>
+          </div>
         </label>
-        <input type="radio" name="gallery" id="comic-art.img01" />
-        <div class="gallery-stage">
-          <label for="no-selection" class="close">X</label>
-          <img src="/assets/img/comic-art/img01.jpg" alt="foo1" />
-        </div>
                                       <label class="thumbnail">
           <img src="/assets/img/comic-art/t_img02.jpg" alt="bar1" />
+          <input type="radio" name="gallery" id="comic-art.img02" />
+          <div class="gallery-stage">
+            <div class="gallery-stage-wrapper">
+              <div class="left column">
+                              <label for="comic-art.img01" class="prev">◀</label>
+                            </div>
+              <div class="center column">
+                <img src="/assets/img/comic-art/img02.jpg" alt="bar1" />
+              </div>
+              <div class="right column">
+              <label for="no-selection" class="close">❌</label>
+                              <label for="comic-art.img03" class="next">▶</label>
+                            </div>
+            </div>
+          </div>
         </label>
-        <input type="radio" name="gallery" id="comic-art.img02" />
-        <div class="gallery-stage">
-          <label for="no-selection" class="close">X</label>
-          <img src="/assets/img/comic-art/img02.jpg" alt="bar1" />
-        </div>
                                       <label class="thumbnail">
           <img src="/assets/img/comic-art/t_img03.jpg" alt="baz1" />
+          <input type="radio" name="gallery" id="comic-art.img03" />
+          <div class="gallery-stage">
+            <div class="gallery-stage-wrapper">
+              <div class="left column">
+                              <label for="comic-art.img02" class="prev">◀</label>
+                            </div>
+              <div class="center column">
+                <img src="/assets/img/comic-art/img03.jpg" alt="baz1" />
+              </div>
+              <div class="right column">
+              <label for="no-selection" class="close">❌</label>
+                              <label for="comic-art.img04" class="next">▶</label>
+                            </div>
+            </div>
+          </div>
         </label>
-        <input type="radio" name="gallery" id="comic-art.img03" />
-        <div class="gallery-stage">
-          <label for="no-selection" class="close">X</label>
-          <img src="/assets/img/comic-art/img03.jpg" alt="baz1" />
-        </div>
                                       <label class="thumbnail">
           <img src="/assets/img/comic-art/t_img04.jpg" alt="foo2" />
+          <input type="radio" name="gallery" id="comic-art.img04" />
+          <div class="gallery-stage">
+            <div class="gallery-stage-wrapper">
+              <div class="left column">
+                              <label for="comic-art.img03" class="prev">◀</label>
+                            </div>
+              <div class="center column">
+                <img src="/assets/img/comic-art/img04.jpg" alt="foo2" />
+              </div>
+              <div class="right column">
+              <label for="no-selection" class="close">❌</label>
+                              <label for="comic-art.img05" class="next">▶</label>
+                            </div>
+            </div>
+          </div>
         </label>
-        <input type="radio" name="gallery" id="comic-art.img04" />
-        <div class="gallery-stage">
-          <label for="no-selection" class="close">X</label>
-          <img src="/assets/img/comic-art/img04.jpg" alt="foo2" />
-        </div>
                                       <label class="thumbnail">
           <img src="/assets/img/comic-art/t_img05.jpg" alt="bar2" />
+          <input type="radio" name="gallery" id="comic-art.img05" />
+          <div class="gallery-stage">
+            <div class="gallery-stage-wrapper">
+              <div class="left column">
+                              <label for="comic-art.img04" class="prev">◀</label>
+                            </div>
+              <div class="center column">
+                <img src="/assets/img/comic-art/img05.jpg" alt="bar2" />
+              </div>
+              <div class="right column">
+              <label for="no-selection" class="close">❌</label>
+                              <label for="comic-art.img06" class="next">▶</label>
+                            </div>
+            </div>
+          </div>
         </label>
-        <input type="radio" name="gallery" id="comic-art.img05" />
-        <div class="gallery-stage">
-          <label for="no-selection" class="close">X</label>
-          <img src="/assets/img/comic-art/img05.jpg" alt="bar2" />
-        </div>
                                       <label class="thumbnail">
           <img src="/assets/img/comic-art/t_img06.jpg" alt="baz2" />
+          <input type="radio" name="gallery" id="comic-art.img06" />
+          <div class="gallery-stage">
+            <div class="gallery-stage-wrapper">
+              <div class="left column">
+                              <label for="comic-art.img05" class="prev">◀</label>
+                            </div>
+              <div class="center column">
+                <img src="/assets/img/comic-art/img06.jpg" alt="baz2" />
+              </div>
+              <div class="right column">
+              <label for="no-selection" class="close">❌</label>
+                              <label for="comic-art.img01" class="next">▶</label>
+                            </div>
+            </div>
+          </div>
         </label>
-        <input type="radio" name="gallery" id="comic-art.img06" />
-        <div class="gallery-stage">
-          <label for="no-selection" class="close">X</label>
-          <img src="/assets/img/comic-art/img06.jpg" alt="baz2" />
-        </div>
                                       <label class="thumbnail">
           <img src="/assets/img/comic-art/t_img01.jpg" alt="foo3" />
+          <input type="radio" name="gallery" id="comic-art.img01" />
+          <div class="gallery-stage">
+            <div class="gallery-stage-wrapper">
+              <div class="left column">
+                              <label for="comic-art.img06" class="prev">◀</label>
+                            </div>
+              <div class="center column">
+                <img src="/assets/img/comic-art/img01.jpg" alt="foo3" />
+              </div>
+              <div class="right column">
+              <label for="no-selection" class="close">❌</label>
+                              <label for="comic-art.img02" class="next">▶</label>
+                            </div>
+            </div>
+          </div>
         </label>
-        <input type="radio" name="gallery" id="comic-art.img01" />
-        <div class="gallery-stage">
-          <label for="no-selection" class="close">X</label>
-          <img src="/assets/img/comic-art/img01.jpg" alt="foo3" />
-        </div>
                                       <label class="thumbnail">
           <img src="/assets/img/comic-art/t_img02.jpg" alt="bar3" />
+          <input type="radio" name="gallery" id="comic-art.img02" />
+          <div class="gallery-stage">
+            <div class="gallery-stage-wrapper">
+              <div class="left column">
+                              <label for="comic-art.img01" class="prev">◀</label>
+                            </div>
+              <div class="center column">
+                <img src="/assets/img/comic-art/img02.jpg" alt="bar3" />
+              </div>
+              <div class="right column">
+              <label for="no-selection" class="close">❌</label>
+                              <label for="comic-art.img03" class="next">▶</label>
+                            </div>
+            </div>
+          </div>
         </label>
-        <input type="radio" name="gallery" id="comic-art.img02" />
-        <div class="gallery-stage">
-          <label for="no-selection" class="close">X</label>
-          <img src="/assets/img/comic-art/img02.jpg" alt="bar3" />
-        </div>
                                       <label class="thumbnail">
           <img src="/assets/img/comic-art/t_img03.jpg" alt="baz3" />
+          <input type="radio" name="gallery" id="comic-art.img03" />
+          <div class="gallery-stage">
+            <div class="gallery-stage-wrapper">
+              <div class="left column">
+                              <label for="comic-art.img02" class="prev">◀</label>
+                            </div>
+              <div class="center column">
+                <img src="/assets/img/comic-art/img03.jpg" alt="baz3" />
+              </div>
+              <div class="right column">
+              <label for="no-selection" class="close">❌</label>
+                            </div>
+            </div>
+          </div>
         </label>
-        <input type="radio" name="gallery" id="comic-art.img03" />
-        <div class="gallery-stage">
-          <label for="no-selection" class="close">X</label>
-          <img src="/assets/img/comic-art/img03.jpg" alt="baz3" />
-        </div>
             </div>
               </section>
                                                 <section name="portraits-gallery" class="gallery" id="portraits">

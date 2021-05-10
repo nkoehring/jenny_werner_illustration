@@ -154,7 +154,7 @@
         height: 100%;
         margin: 0;
       }
-      #content input {
+      #content input[type="radio"] {
         display: none;
       }
 
@@ -190,6 +190,7 @@
         height: 100%;
         background: inherit;
       }
+
       .thumbnail {
         display: block;
         width: 60%;
@@ -198,17 +199,59 @@
       }
       .thumbnail > img {
         width: 100%;
+        cursor: pointer;
       }
       .gallery-stage {
         display: none;
+        position: absolute;
         top: .1rem;
         left: .2rem;
-        width: 90vw;
-        height: 90vh;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, .9);
         z-index: 1;
       }
-      .gallery-page input:checked + .gallery-stage {
+      input:checked + .gallery-stage {
         display: block;
+      }
+
+      .gallery-stage-wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        height: 100%;
+      }
+
+      .gallery-stage-wrapper > .column {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+      }
+      .gallery-stage-wrapper > .column.center {
+        flex: 0 0 auto;
+        width: 80vw;
+      }
+      .gallery-stage-wrapper > .column.center > img {
+        height: 100%;
+      }
+
+      .gallery-stage-wrapper label {
+        width: 100%;
+        text-align: center;
+        line-height: 10rem;
+        height: 10rem;
+        cursor: pointer;
+      }
+      .gallery-stage-wrapper label:hover {
+        background: var(--dark);
+      }
+      .gallery-stage-wrapper .close {
+        position: absolute;
+        top: 2rem;
+        width: 10rem;
       }
     </style>
   </head>
