@@ -144,6 +144,7 @@
       }
       #content > section:target, #content > section.index {
         display: block;
+        height: 0; /* weird fix to avoid broken layout on content overflow */
       }
       #content > section:target ~ .index {
         display: none;
