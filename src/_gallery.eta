@@ -13,7 +13,7 @@
           let nextId = i < l-1 ? `${it.slug}.${it.images[i+1].name}` : null
         %>
         <label class="thumbnail">
-          <img src="<%= thumb %>" alt="<%= image.alt %>" />
+          <img src="<%= thumb %>" alt="<%= image.alt %>" loading="lazy" />
           <input type="radio" name="gallery" id="<%= id %>" />
           <div class="gallery-stage">
             <div class="gallery-stage-wrapper">
@@ -23,7 +23,7 @@
               <% } %>
               </div>
               <div class="center column">
-                <img src="<%= path %>" alt="<%= image.alt %>" />
+                <img src="<%= path %>" alt="<%= image.alt %>" loading="lazy" />
               </div>
               <div class="right column">
               <label for="no-selection" class="close">❌</label>
