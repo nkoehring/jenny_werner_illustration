@@ -138,15 +138,24 @@
         position: absolute;
         top: 0;
         left: 0;
+        width: calc(100% - 4rem);
         min-height: 100%;
         margin: 0 2rem;
         background: var(--shade);
       }
-      #content > section:target {
+      #content > section:target, #content > section.index {
         display: block;
       }
-      #content > section:first-of-type{
-        display: block;
+      #content > section:target ~ .index {
+        display: none;
+      }
+      #content > section.gallery {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      #content input {
+        position: absolute;
       }
 
       main > footer {
@@ -169,6 +178,41 @@
       .social-media-icon:hover {
         filter: invert() drop-shadow(0 0 5px var(--bright));
       }
+
+      .gallery-page {
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+      }
+      .thumbnail {
+        position: relative;
+        display: block;
+        width: 60%;
+        background-color: rgba(0, 0, 0, .1);
+        border: .6rem solid var(--dark);
+      }
+      .thumbnail > img {
+        width: 100%;
+      }
+      .gallery-stage {
+        display: none;
+        position: absolute;
+        top: .1rem;
+        left: .2rem;
+        width: 90vw;
+        height: 90vh;
+        z-index: 1;
+      }
+      .gallery-page input:checked + .gallery-stage {
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -185,60 +229,123 @@
       <div class="content-wrapper">
         <aside>
           <menu>
-                                    <li class="entry"><a href="/#about">About</a></li>
-                                                <li class="entry"><a href="/#contact">Contact</a></li>
-                                                <li class="stretch">&nbsp;</li>
-                                                <li class="entry"><a href="/#comic-art">Comic Art</a></li>
-                                                <li class="entry"><a href="/#portraits">Portraits</a></li>
-                                                <li class="entry"><a href="/#painting">Painting</a></li>
-                                                <li class="entry"><a href="/#pixel-art">Pixel Art</a></li>
-                                                <li class="entry"><a href="/#traditional">Traditional</a></li>
-                                                <li class="entry"><a href="/#sewing">Sewing</a></li>
-                                                <li class="entry"><a href="/#various">Various</a></li>
-                                                <li class="stretch">&nbsp;</li>
-                                <menu>
+            <li class="entry"><a href="/#about">About</a></li>
+                <li class="entry"><a href="/#contact">Contact</a></li>
+                <li class="stretch">&nbsp;</li>
+                <li class="entry"><a href="/#comic-art">Comic Art</a></li>
+                <li class="entry"><a href="/#portraits">Portraits</a></li>
+                <li class="entry"><a href="/#painting">Painting</a></li>
+                <li class="entry"><a href="/#pixel-art">Pixel Art</a></li>
+                <li class="entry"><a href="/#traditional">Traditional</a></li>
+                <li class="entry"><a href="/#sewing">Sewing</a></li>
+                <li class="entry"><a href="/#various">Various</a></li>
+                <li class="stretch">&nbsp;</li>
+      <menu>
         </aside>
+
         <div id="content">
-                                    <section name="about" id="about">
-                <h1>Welcome to ABOUT</h1>
-<p>Etiam convallis tempus scelerisque. Maecenas egestas ac risus non tempus. Phasellus nec rutrum felis. Nulla pharetra, ex at mollis aliquet, dui quam eleifend eros, eu dignissim sapien augue ut sapien. Suspendisse augue justo, bibendum quis sagittis mattis, facilisis eget ipsum. Sed nec libero turpis. Fusce massa magna, pellentesque ut magna in, elementum condimentum velit. In eget gravida est, non malesuada metus.</p>
-              </section>
-                                                <section name="contact" id="contact">
+          <input type="radio" id="no-selection" name="gallery" checked />
+                                    <section name="contact" id="contact">
                 <h1>Welcome to CONTACT</h1>
 <p>Etiam convallis tempus scelerisque. Maecenas egestas ac risus non tempus. Phasellus nec rutrum felis. Nulla pharetra, ex at mollis aliquet, dui quam eleifend eros, eu dignissim sapien augue ut sapien. Suspendisse augue justo, bibendum quis sagittis mattis, facilisis eget ipsum. Sed nec libero turpis. Fusce massa magna, pellentesque ut magna in, elementum condimentum velit. In eget gravida est, non malesuada metus.</p>
 <p>Etiam convallis tempus scelerisque. Maecenas egestas ac risus non tempus. Phasellus nec rutrum felis. Nulla pharetra, ex at mollis aliquet, dui quam eleifend eros, eu dignissim sapien augue ut sapien. Suspendisse augue justo, bibendum quis sagittis mattis, facilisis eget ipsum. Sed nec libero turpis. Fusce massa magna, pellentesque ut magna in, elementum condimentum velit. In eget gravida est, non malesuada metus.</p>
 <p>Etiam convallis tempus scelerisque. Maecenas egestas ac risus non tempus. Phasellus nec rutrum felis. Nulla pharetra, ex at mollis aliquet, dui quam eleifend eros, eu dignissim sapien augue ut sapien. Suspendisse augue justo, bibendum quis sagittis mattis, facilisis eget ipsum. Sed nec libero turpis. Fusce massa magna, pellentesque ut magna in, elementum condimentum velit. In eget gravida est, non malesuada metus.</p>
 <p>Etiam convallis tempus scelerisque. Maecenas egestas ac risus non tempus. Phasellus nec rutrum felis. Nulla pharetra, ex at mollis aliquet, dui quam eleifend eros, eu dignissim sapien augue ut sapien. Suspendisse augue justo, bibendum quis sagittis mattis, facilisis eget ipsum. Sed nec libero turpis. Fusce massa magna, pellentesque ut magna in, elementum condimentum velit. In eget gravida est, non malesuada metus.</p>
               </section>
-                                                                      <section name="comic-art gallery" id="comic-art">
-                <h1>Welcome to comic-art GALLERY</h1>
-<p>Etiam convallis tempus scelerisque. Maecenas egestas ac risus non tempus. Phasellus nec rutrum felis. Nulla pharetra, ex at mollis aliquet, dui quam eleifend eros, eu dignissim sapien augue ut sapien. Suspendisse augue justo, bibendum quis sagittis mattis, facilisis eget ipsum. Sed nec libero turpis. Fusce massa magna, pellentesque ut magna in, elementum condimentum velit. In eget gravida est, non malesuada metus.</p>
+                                                                      <section name="comic-art-gallery" class="gallery" id="comic-art">
+                    <div class="gallery-page gallery-page-0 from-0-to-9">
+                                <label class="thumbnail">
+          <img src="/assets/img/comic-art/t_img01.jpg" alt="foo1" />
+        </label>
+        <input type="radio" name="gallery" id="comic-art.img01" />
+        <div class="gallery-stage">
+          <label for="no-selection" class="close">X</label>
+          <img src="/assets/img/comic-art/img01.jpg" alt="foo1" />
+        </div>
+                                      <label class="thumbnail">
+          <img src="/assets/img/comic-art/t_img02.jpg" alt="bar1" />
+        </label>
+        <input type="radio" name="gallery" id="comic-art.img02" />
+        <div class="gallery-stage">
+          <label for="no-selection" class="close">X</label>
+          <img src="/assets/img/comic-art/img02.jpg" alt="bar1" />
+        </div>
+                                      <label class="thumbnail">
+          <img src="/assets/img/comic-art/t_img03.jpg" alt="baz1" />
+        </label>
+        <input type="radio" name="gallery" id="comic-art.img03" />
+        <div class="gallery-stage">
+          <label for="no-selection" class="close">X</label>
+          <img src="/assets/img/comic-art/img03.jpg" alt="baz1" />
+        </div>
+                                      <label class="thumbnail">
+          <img src="/assets/img/comic-art/t_img04.jpg" alt="foo2" />
+        </label>
+        <input type="radio" name="gallery" id="comic-art.img04" />
+        <div class="gallery-stage">
+          <label for="no-selection" class="close">X</label>
+          <img src="/assets/img/comic-art/img04.jpg" alt="foo2" />
+        </div>
+                                      <label class="thumbnail">
+          <img src="/assets/img/comic-art/t_img05.jpg" alt="bar2" />
+        </label>
+        <input type="radio" name="gallery" id="comic-art.img05" />
+        <div class="gallery-stage">
+          <label for="no-selection" class="close">X</label>
+          <img src="/assets/img/comic-art/img05.jpg" alt="bar2" />
+        </div>
+                                      <label class="thumbnail">
+          <img src="/assets/img/comic-art/t_img06.jpg" alt="baz2" />
+        </label>
+        <input type="radio" name="gallery" id="comic-art.img06" />
+        <div class="gallery-stage">
+          <label for="no-selection" class="close">X</label>
+          <img src="/assets/img/comic-art/img06.jpg" alt="baz2" />
+        </div>
+                                      <label class="thumbnail">
+          <img src="/assets/img/comic-art/t_img01.jpg" alt="foo3" />
+        </label>
+        <input type="radio" name="gallery" id="comic-art.img01" />
+        <div class="gallery-stage">
+          <label for="no-selection" class="close">X</label>
+          <img src="/assets/img/comic-art/img01.jpg" alt="foo3" />
+        </div>
+                                      <label class="thumbnail">
+          <img src="/assets/img/comic-art/t_img02.jpg" alt="bar3" />
+        </label>
+        <input type="radio" name="gallery" id="comic-art.img02" />
+        <div class="gallery-stage">
+          <label for="no-selection" class="close">X</label>
+          <img src="/assets/img/comic-art/img02.jpg" alt="bar3" />
+        </div>
+                                      <label class="thumbnail">
+          <img src="/assets/img/comic-art/t_img03.jpg" alt="baz3" />
+        </label>
+        <input type="radio" name="gallery" id="comic-art.img03" />
+        <div class="gallery-stage">
+          <label for="no-selection" class="close">X</label>
+          <img src="/assets/img/comic-art/img03.jpg" alt="baz3" />
+        </div>
+            </div>
               </section>
-                                                <section name="portraits gallery" id="portraits">
-                <h1>Welcome to portraits GALLERY</h1>
+                                                <section name="portraits-gallery" class="gallery" id="portraits">
+                              </section>
+                                                <section name="painting-gallery" class="gallery" id="painting">
+                              </section>
+                                                <section name="pixel-art-gallery" class="gallery" id="pixel-art">
+                              </section>
+                                                <section name="traditional-gallery" class="gallery" id="traditional">
+                              </section>
+                                                <section name="sewing-gallery" class="gallery" id="sewing">
+                              </section>
+                                                <section name="various-gallery" class="gallery" id="various">
+                              </section>
+                                                                          <section name="about" id="about" class="index">
+            <h1>Welcome to ABOUT</h1>
 <p>Etiam convallis tempus scelerisque. Maecenas egestas ac risus non tempus. Phasellus nec rutrum felis. Nulla pharetra, ex at mollis aliquet, dui quam eleifend eros, eu dignissim sapien augue ut sapien. Suspendisse augue justo, bibendum quis sagittis mattis, facilisis eget ipsum. Sed nec libero turpis. Fusce massa magna, pellentesque ut magna in, elementum condimentum velit. In eget gravida est, non malesuada metus.</p>
-              </section>
-                                                <section name="painting gallery" id="painting">
-                <h1>Welcome to painting GALLERY</h1>
-<p>Etiam convallis tempus scelerisque. Maecenas egestas ac risus non tempus. Phasellus nec rutrum felis. Nulla pharetra, ex at mollis aliquet, dui quam eleifend eros, eu dignissim sapien augue ut sapien. Suspendisse augue justo, bibendum quis sagittis mattis, facilisis eget ipsum. Sed nec libero turpis. Fusce massa magna, pellentesque ut magna in, elementum condimentum velit. In eget gravida est, non malesuada metus.</p>
-              </section>
-                                                <section name="pixel-art gallery" id="pixel-art">
-                <h1>Welcome to pixel-art GALLERY</h1>
-<p>Etiam convallis tempus scelerisque. Maecenas egestas ac risus non tempus. Phasellus nec rutrum felis. Nulla pharetra, ex at mollis aliquet, dui quam eleifend eros, eu dignissim sapien augue ut sapien. Suspendisse augue justo, bibendum quis sagittis mattis, facilisis eget ipsum. Sed nec libero turpis. Fusce massa magna, pellentesque ut magna in, elementum condimentum velit. In eget gravida est, non malesuada metus.</p>
-              </section>
-                                                <section name="traditional gallery" id="traditional">
-                <h1>Welcome to traditional GALLERY</h1>
-<p>Etiam convallis tempus scelerisque. Maecenas egestas ac risus non tempus. Phasellus nec rutrum felis. Nulla pharetra, ex at mollis aliquet, dui quam eleifend eros, eu dignissim sapien augue ut sapien. Suspendisse augue justo, bibendum quis sagittis mattis, facilisis eget ipsum. Sed nec libero turpis. Fusce massa magna, pellentesque ut magna in, elementum condimentum velit. In eget gravida est, non malesuada metus.</p>
-              </section>
-                                                <section name="sewing gallery" id="sewing">
-                <h1>Welcome to sewing GALLERY</h1>
-<p>Etiam convallis tempus scelerisque. Maecenas egestas ac risus non tempus. Phasellus nec rutrum felis. Nulla pharetra, ex at mollis aliquet, dui quam eleifend eros, eu dignissim sapien augue ut sapien. Suspendisse augue justo, bibendum quis sagittis mattis, facilisis eget ipsum. Sed nec libero turpis. Fusce massa magna, pellentesque ut magna in, elementum condimentum velit. In eget gravida est, non malesuada metus.</p>
-              </section>
-                                                <section name="various gallery" id="various">
-                <h1>Welcome to various GALLERY</h1>
-<p>Etiam convallis tempus scelerisque. Maecenas egestas ac risus non tempus. Phasellus nec rutrum felis. Nulla pharetra, ex at mollis aliquet, dui quam eleifend eros, eu dignissim sapien augue ut sapien. Suspendisse augue justo, bibendum quis sagittis mattis, facilisis eget ipsum. Sed nec libero turpis. Fusce massa magna, pellentesque ut magna in, elementum condimentum velit. In eget gravida est, non malesuada metus.</p>
-              </section>
-                                                    </div>
+          </section>
+        </div>
+
       </div>
 
       <footer>

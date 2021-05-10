@@ -138,15 +138,24 @@
         position: absolute;
         top: 0;
         left: 0;
+        width: calc(100% - 4rem);
         min-height: 100%;
         margin: 0 2rem;
         background: var(--shade);
       }
-      #content > section:target {
+      #content > section:target, #content > section.index {
         display: block;
       }
-      #content > section:first-of-type{
-        display: block;
+      #content > section:target ~ .index {
+        display: none;
+      }
+      #content > section.gallery {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      #content input {
+        position: absolute;
       }
 
       main > footer {
@@ -169,6 +178,41 @@
       .social-media-icon:hover {
         filter: invert() drop-shadow(0 0 5px var(--bright));
       }
+
+      .gallery-page {
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(<%= it.galleryOptions.cols %>, 1fr);
+        grid-template-rows: repeat(<%= it.galleryOptions.rows %>, 1fr);
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+      }
+      .thumbnail {
+        position: relative;
+        display: block;
+        width: 60%;
+        background-color: rgba(0, 0, 0, .1);
+        border: .6rem solid var(--dark);
+      }
+      .thumbnail > img {
+        width: 100%;
+      }
+      .gallery-stage {
+        display: none;
+        position: absolute;
+        top: .1rem;
+        left: .2rem;
+        width: 90vw;
+        height: 90vh;
+        z-index: 1;
+      }
+      .gallery-page input:checked + .gallery-stage {
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -184,29 +228,29 @@
 
       <div class="content-wrapper">
         <aside>
-          <menu>
-          <% for (item of it.menu) { %>
-            <% if (item.type === 'separator') { %>
-              <li class="stretch">&nbsp;</li>
-            <% } else { %>
-              <li class="entry"><a href="/#<%= item.slug %>"><%= item.name %></a></li>
-            <% } %>
-          <% } %>
-          <menu>
+          <%~ includeFile('_menu', { menu: it.menu }) %>
         </aside>
+
         <div id="content">
-          <% for (item of it.menu) { %>
-            <% if (item.type === 'page') { %>
+          <input type="radio" id="no-selection" name="gallery" checked />
+          <% for (item of it.menu.slice(1)) { %>
+            <% if (item.type === 'page' && !item.index) { %>
               <section name="<%= item.slug %>" id="<%= item.slug %>">
                 <%~ includeFile(`_${item.slug}`) %>
               </section>
-            <% } else if (item.type === 'gallery') { %>
-              <section name="<%= item.slug %> gallery" id="<%= item.slug %>">
-                <%~ includeFile('_gallery', { name: item.slug }) %>
+            <% } else if (item.type === 'gallery' && !item.index) { %>
+              <section name="<%= item.slug %>-gallery" class="gallery" id="<%= item.slug %>">
+                <%~ includeFile('_gallery', { slug: item.slug, images: it.gallery[item.slug], ...it.galleryOptions }) %>
               </section>
             <% } %>
           <% } %>
+          <% /* index page comes last, so that we can hide it with ~ css selector */ %>
+          <% /* TODO: this breaks if index is a gallery */ %>
+          <section name="<%= it.menu[0].slug %>" id="<%= it.menu[0].slug %>" class="index">
+            <%~ includeFile(`_${it.menu[0].slug}`) %>
+          </section>
         </div>
+
       </div>
 
       <footer>

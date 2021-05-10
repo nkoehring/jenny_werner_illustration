@@ -1,0 +1,9 @@
+<menu>
+  <% for (item of it.menu) { %>
+    <% if (item.type === 'separator') { %>
+      <li class="stretch">&nbsp;</li>
+    <% } else { %>
+      <li class="entry"><a href="/#<%= item.slug %>"><%= item.name %></a></li>
+    <% } %>
+  <% } %>
+<menu>

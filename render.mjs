@@ -25,8 +25,9 @@ async function render() {
       description: 'Jenny Werners Portfolio Page',
       footer: '© 2021 Jenny Werner Illustration'
     },
+    // first entry is always handled as index page
     menu: [
-      { type: 'page', name: 'About', slug: 'about'},
+      { type: 'page', name: 'About', slug: 'about' },
       { type: 'page', name: 'Contact', slug: 'contact'},
       { type: 'separator' },
       { type: 'gallery', name: 'Comic Art', slug: 'comic-art'},
@@ -38,6 +39,51 @@ async function render() {
       { type: 'gallery', name: 'Various', slug: 'various'},
       { type: 'separator' }
     ],
+    galleryOptions: {
+      rows: 3,
+      cols: 3
+    },
+    gallery: {
+      // the path is generated like `/assets/img/$galleryName/$name.jpg`
+      'comic-art': [
+        { alt: 'foo1', name: 'img01' },
+        { alt: 'bar1', name: 'img02' },
+        { alt: 'baz1', name: 'img03' },
+        { alt: 'foo2', name: 'img04' },
+        { alt: 'bar2', name: 'img05' },
+        { alt: 'baz2', name: 'img06' },
+        { alt: 'foo3', name: 'img01' },
+        { alt: 'bar3', name: 'img02' },
+        { alt: 'baz3', name: 'img03' },
+        //{ alt: 'foo4', name: 'img04' },
+        //{ alt: 'bar4', name: 'img05' },
+        //{ alt: 'baz4', name: 'img06' },
+        //{ alt: 'foo5', name: 'img01' },
+        //{ alt: 'bar5', name: 'img02' },
+        //{ alt: 'baz5', name: 'img03' },
+        //{ alt: 'foo6', name: 'img04' },
+        //{ alt: 'bar6', name: 'img05' },
+        //{ alt: 'baz6', name: 'img06' },
+        //{ alt: 'foo7', name: 'img01' },
+        //{ alt: 'bar7', name: 'img02' },
+        //{ alt: 'baz7', name: 'img03' },
+        //{ alt: 'foo8', name: 'img04' },
+        //{ alt: 'bar8', name: 'img05' },
+        //{ alt: 'baz8', name: 'img06' }
+      ],
+      'portraits': [
+      ],
+      'painting': [
+      ],
+      'pixel-art': [
+      ],
+      'traditional': [
+      ],
+      'sewing': [
+      ],
+      'various': [
+      ],
+    },
     social: [
       { name: 'discord', url: 'https://discord.gg/ZMr2TkerxJ' },
       { name: 'telegram', url: 'https://t.me/jennywernerillustrations' },

@@ -1,2 +1,24 @@
-<h1>Welcome to <%= it.name %> GALLERY</h1>
-<p>Etiam convallis tempus scelerisque. Maecenas egestas ac risus non tempus. Phasellus nec rutrum felis. Nulla pharetra, ex at mollis aliquet, dui quam eleifend eros, eu dignissim sapien augue ut sapien. Suspendisse augue justo, bibendum quis sagittis mattis, facilisis eget ipsum. Sed nec libero turpis. Fusce massa magna, pellentesque ut magna in, elementum condimentum velit. In eget gravida est, non malesuada metus.</p>
+<% const l = it.images.length, perPage = it.rows * it.cols %>
+<% for (let page = 0; page < Math.ceil(l / 9); page++) { %>
+  <% let start = page * perPage, end = page * perPage + perPage %>
+  <div class="gallery-page gallery-page-<%= page %> from-<%= start %>-to-<%= end > l ? l : end %>">
+    <% for (let i = start; i < end; i++) { %>
+      <% let image = it.images[i] %>
+      <% if (image) { %>
+        <%
+          let path = `/assets/img/${it.slug}/${image.name}.jpg`
+          let thumb = `/assets/img/${it.slug}/t_${image.name}.jpg`
+          let id = `${it.slug}.${image.name}`
+        %>
+        <label class="thumbnail">
+          <img src="<%= thumb %>" alt="<%= image.alt %>" />
+        </label>
+        <input type="radio" name="gallery" id="<%= id %>" />
+        <div class="gallery-stage">
+          <label for="no-selection" class="close">X</label>
+          <img src="<%= path %>" alt="<%= image.alt %>" />
+        </div>
+      <% } %>
+    <% } %>
+  </div>
+<% } %>
