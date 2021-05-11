@@ -17,6 +17,10 @@
     <meta property="og:image" content="<%= it.page.url %>/assets/thumbnail.png">
 
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
+    <link rel="preload" as="font" href="/assets/cantarell.woff2">
+    <link rel="preload" as="image" href="/assets/logo.svg">
+    <link rel="preload" as="image" href="/assets/feather.svg">
+
     <style>
       @font-face {
         font-family: 'Cantarell';
@@ -24,6 +28,7 @@
         url('/assets/cantarell.woff') format('woff');
         font-weight: normal;
         font-style: normal;
+        font-display: swap;
       }
 
       :root {
