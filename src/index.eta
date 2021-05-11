@@ -35,7 +35,7 @@
         --menu-width: <%= it.cssVars.menuWidth %>;
         --header-height: 17rem;
         --footer-height: 4rem;
-        --main-height: calc(100vh - var(--header-height) - var(--footer-height) - 3*var(--spacing));
+        --main-height: calc(100vh - var(--header-height) - var(--footer-height) - 4*var(--spacing));
         font-size: 10px;
       }
 
