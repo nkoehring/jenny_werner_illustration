@@ -1,6 +1,11 @@
-<% const l = it.images.length, perPage = it.rows * it.cols %>
-<% for (let page = 0; page < Math.ceil(l / 9); page++) { %>
+<% const l = it.images.length, perPage = it.rows * it.cols, pages = Math.ceil(l / perPage) %>
+<% for (let page = 0; page < pages; page++) { %>
   <% let start = page * perPage, end = page * perPage + perPage %>
+  <% if (page === 0) { %>
+    <input type="radio" name="gallery-page" id="<%= `${it.slug}-page-${page}` %>" checked="checked" />
+  <% } else { %>
+    <input type="radio" name="gallery-page" id="<%= `${it.slug}-page-${page}` %>" />
+  <% } %>
   <div class="gallery-page gallery-page-<%= page %> from-<%= start %>-to-<%= end > l ? l : end %>">
     <% for (let i = start; i < end; i++) { %>
       <% let image = it.images[i] %>
@@ -36,5 +41,22 @@
         </label>
       <% } %>
     <% } %>
+    <nav>
+      <%
+        let prevPageId = page > 0 ? page - 1 : null
+        let nextPageId = page < pages-1 ? page + 1 : null
+      %>
+      <% if (prevPageId !== null) { %>
+        <label for="<%= `${it.slug}-page-${prevPageId}` %>" class="prev">◀</label>
+      <% } else { %>
+        <label class="disabled">◀</label>
+      <% } %>
+      <span><%= page + 1 %> / <%= pages %></span>
+      <% if (nextPageId !== null) { %>
+        <label for="<%= `${it.slug}-page-${nextPageId}` %>" class="next">▶</label>
+      <% } else { %>
+        <label class="disabled">▶</label>
+      <% } %>
+    </nav>
   </div>
 <% } %>

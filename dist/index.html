@@ -184,16 +184,35 @@
         filter: invert() drop-shadow(0 0 5px var(--bright));
       }
 
-      .gallery-page {
+      input[name="gallery-page"]:checked + .gallery-page {
         display: grid;
+      }
+      .gallery-page {
+        display: none;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 5fr) 1fr;
         justify-content: space-around;
         justify-items: center;
         align-items: center;
         width: 100%;
         height: 100%;
         background: inherit;
+      }
+
+      .gallery-page > nav {
+        grid-row: 4;
+        grid-column: 2;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        width: 100%;
+      }
+      .gallery-page > nav > label {
+        cursor: pointer;
+      }
+      .gallery-page > nav > .disabled {
+        opacity: .3;
+        cursor: default;
       }
 
       .thumbnail {
@@ -216,9 +235,10 @@
         background: rgba(0, 0, 0, .9);
         z-index: 1;
       }
-      input:checked + .gallery-stage {
+      input[name="gallery"]:checked + .gallery-stage {
+        display: grid;
         display: block;
-      }
+      none
 
       .gallery-stage-wrapper {
         display: flex;
@@ -298,7 +318,8 @@
 <p>Etiam convallis tempus scelerisque. Maecenas egestas ac risus non tempus. Phasellus nec rutrum felis. Nulla pharetra, ex at mollis aliquet, dui quam eleifend eros, eu dignissim sapien augue ut sapien. Suspendisse augue justo, bibendum quis sagittis mattis, facilisis eget ipsum. Sed nec libero turpis. Fusce massa magna, pellentesque ut magna in, elementum condimentum velit. In eget gravida est, non malesuada metus.</p>
               </section>
                                                                       <section name="comic-art-gallery" class="gallery" id="comic-art">
-                    <div class="gallery-page gallery-page-0 from-0-to-9">
+                        <input type="radio" name="gallery-page" id="comic-art-page-0" checked="checked" />
+    <div class="gallery-page gallery-page-0 from-0-to-9">
                                 <label class="thumbnail">
           <img src="/assets/img/comic-art/t_img01.jpg" alt="foo1" loading="lazy" />
           <input type="radio" name="gallery" id="comic-art.img01" />
@@ -455,11 +476,96 @@
               </div>
               <div class="right column">
               <label for="no-selection" class="close">❌</label>
+                              <label for="comic-art.img04" class="next">▶</label>
                             </div>
             </div>
           </div>
         </label>
+              <nav>
+                    <label class="disabled">◀</label>
+            <span>1 / 2</span>
+              <label for="comic-art-page-1" class="next">▶</label>
+          </nav>
+  </div>
+        <input type="radio" name="gallery-page" id="comic-art-page-1" />
+    <div class="gallery-page gallery-page-1 from-9-to-13">
+                                <label class="thumbnail">
+          <img src="/assets/img/comic-art/t_img04.jpg" alt="foo4" loading="lazy" />
+          <input type="radio" name="gallery" id="comic-art.img04" />
+          <div class="gallery-stage">
+            <div class="gallery-stage-wrapper">
+              <div class="left column">
+                              <label for="comic-art.img03" class="prev">◀</label>
+                            </div>
+              <div class="center column">
+                <img src="/assets/img/comic-art/img04.jpg" alt="foo4" loading="lazy" />
+              </div>
+              <div class="right column">
+              <label for="no-selection" class="close">❌</label>
+                              <label for="comic-art.img05" class="next">▶</label>
+                            </div>
             </div>
+          </div>
+        </label>
+                                      <label class="thumbnail">
+          <img src="/assets/img/comic-art/t_img05.jpg" alt="bar4" loading="lazy" />
+          <input type="radio" name="gallery" id="comic-art.img05" />
+          <div class="gallery-stage">
+            <div class="gallery-stage-wrapper">
+              <div class="left column">
+                              <label for="comic-art.img04" class="prev">◀</label>
+                            </div>
+              <div class="center column">
+                <img src="/assets/img/comic-art/img05.jpg" alt="bar4" loading="lazy" />
+              </div>
+              <div class="right column">
+              <label for="no-selection" class="close">❌</label>
+                              <label for="comic-art.img06" class="next">▶</label>
+                            </div>
+            </div>
+          </div>
+        </label>
+                                      <label class="thumbnail">
+          <img src="/assets/img/comic-art/t_img06.jpg" alt="baz4" loading="lazy" />
+          <input type="radio" name="gallery" id="comic-art.img06" />
+          <div class="gallery-stage">
+            <div class="gallery-stage-wrapper">
+              <div class="left column">
+                              <label for="comic-art.img05" class="prev">◀</label>
+                            </div>
+              <div class="center column">
+                <img src="/assets/img/comic-art/img06.jpg" alt="baz4" loading="lazy" />
+              </div>
+              <div class="right column">
+              <label for="no-selection" class="close">❌</label>
+                              <label for="comic-art.img01" class="next">▶</label>
+                            </div>
+            </div>
+          </div>
+        </label>
+                                      <label class="thumbnail">
+          <img src="/assets/img/comic-art/t_img01.jpg" alt="foo5" loading="lazy" />
+          <input type="radio" name="gallery" id="comic-art.img01" />
+          <div class="gallery-stage">
+            <div class="gallery-stage-wrapper">
+              <div class="left column">
+                              <label for="comic-art.img06" class="prev">◀</label>
+                            </div>
+              <div class="center column">
+                <img src="/assets/img/comic-art/img01.jpg" alt="foo5" loading="lazy" />
+              </div>
+              <div class="right column">
+              <label for="no-selection" class="close">❌</label>
+                            </div>
+            </div>
+          </div>
+        </label>
+                                                                                              <nav>
+                    <label for="comic-art-page-0" class="prev">◀</label>
+            <span>2 / 2</span>
+              <label class="disabled">▶</label>
+          </nav>
+  </div>
               </section>
                                                 <section name="portraits-gallery" class="gallery" id="portraits">
                               </section>
