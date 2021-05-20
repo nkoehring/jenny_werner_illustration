@@ -9,14 +9,14 @@ sections:
   label: Galleries
   create: documents
   match: "*.json"
-  new_doc_ext: ".json"
+  new_doc_ext: json
   templates:
   - theme-configuration
 - type: document
   path: src/page.json
   label: Page Config
-upload_dir: uploads
-public_path: "/uploads"
+upload_dir: dist/assets/img
+public_path: "/assets/img"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
