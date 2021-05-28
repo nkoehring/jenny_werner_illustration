@@ -31,7 +31,7 @@
                 <img src="<%= path %>" alt="<%= image.alt %>" loading="lazy" />
               </div>
               <div class="right column">
-              <label for="no-selection" class="close">❌</label>
+              <label for="no-selection" class="close">×</label>
               <% if (nextId) { %>
                 <label for="<%= nextId %>" class="next">▶</label>
               <% } %>

@@ -258,9 +258,6 @@
         flex: 0 0 auto;
         width: 80vw;
       }
-      .gallery-stage-wrapper > .column.center > img {
-        height: 100%;
-      }
 
       .gallery-stage-wrapper label {
         width: 100%;
@@ -276,6 +273,7 @@
         position: absolute;
         top: 2rem;
         width: 10rem;
+        font-size: 2em;
       }
     </style>
   </head>
