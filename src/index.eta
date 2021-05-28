@@ -237,8 +237,7 @@
       }
       input[name="gallery"]:checked + .gallery-stage {
         display: grid;
-        display: block;
-      none
+      }
 
       .gallery-stage-wrapper {
         display: flex;
