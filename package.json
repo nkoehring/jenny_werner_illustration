@@ -1,16 +1,18 @@
 {
-    "name": "jenny_werner_illustration",
-    "version": "0.1.0",
-    "description": "Jenny Werners personal portfolio page",
-    "main": "index.html",
-    "repository": "https://github.com/nkoehring/jenny_werner_illustration",
-    "author": "koehr",
-    "license": "MIT",
-    "private": true,
-    "devDependencies": {
-        "eta": "^1.12.1"
-    },
-    "scripts": {
-        "build": "node ./render.mjs"
-    }
+  "name": "jenny_werner_illustration",
+  "version": "0.1.0",
+  "description": "Jenny Werners personal portfolio page",
+  "main": "index.html",
+  "repository": "https://github.com/nkoehring/jenny_werner_illustration",
+  "author": "koehr",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "eta": "^1.12.1",
+    "serve": "^13.0.2"
+  },
+  "scripts": {
+    "build": "node ./render.mjs",
+    "serve": "serve ./dist"
+  }
 }

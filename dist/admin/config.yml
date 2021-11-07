@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "dist/assets/img"
+public_folder: "/assets/img"
+
+collections:
+  - name: "pages"
+    label: "Static Pages"
+    folder: "./pages"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Content", name: "body", widget: "markdown"}
+
+  - name: "galleries"
+    label: "Galleries"
+    folder: "./galleries"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - label: "Images"
+        name: "content"
+        widget: "list"
+        fields:
+        - {label: "Label", name: "label", widget: "string"}
+        - {label: "Alt Text", name: "alt", widget: "string"}
+        - {label: "Image", name: "image", widget: "image"}
+
