@@ -8,7 +8,7 @@ public_folder: "/assets/img"
 collections:
   - name: "pages"
     label: "Static Pages"
-    folder: "./pages"
+    folder: "pages"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
@@ -16,7 +16,7 @@ collections:
 
   - name: "galleries"
     label: "Galleries"
-    folder: "./galleries"
+    folder: "galleries"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
