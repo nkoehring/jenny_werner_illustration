@@ -30,6 +30,8 @@ collections:
     label: "Global Settings"
     create: false
     delete: false
+    editor:
+      preview: false
     files:
       - name: "styles"
         label: "Page Style and Colours"
