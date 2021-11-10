@@ -8,23 +8,87 @@ public_folder: "/assets/img"
 collections:
   - name: "pages"
     label: "Static Pages"
-    folder: "pages"
-    create: true
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Content", name: "body", widget: "markdown"}
+    create: false
+    delete: false
+    files:
+      - name: "about"
+        label: "About"
+        file: "pages/about.json"
+        description: "Tell people more about you"
+        fields:
+          - {label: "Title", name: "title", widget: "string", default: "About"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: "contact"
+        label: "Contact"
+        file: "pages/contact.json"
+        description: "Contact information / impress"
+        fields:
+          - {label: "Title", name: "title", widget: "string", default: "Contact"}
+          - {label: "Content", name: "body", widget: "markdown"}
+
+  - name: "settings"
+    label: "Global Settings"
+    create: false
+    delete: false
+    files:
+      - name: "styles"
+        label: "Page Style and Colours"
+        file: "settings/styles.json"
+        description: "Tweak colours, spacing and menu width"
+        fields:
+          - {label: "Dark Colour", name: "dark", widget: "string", default: "#06112d"}
+          - {label: "Bright Colour", name: "bright", widget: "string", default: "#ffffff"}
+          - {label: "Shade", name: "shade", widget: "string", default: "#7d8391"}
+          - {label: "Page Width", name: "width", widget: "string", default: "99rem"}
+          - {label: "Menu Width", name: "menuWidth", widget: "string", default: "18%"}
+          - {label: "Spacing", name: "spacing", widget: "string", default: "3rem"}
+      - name: "page"
+        label: "Page Settings"
+        file: "settings/page.json"
+        description: "Page title, URL, meta information"
+        fields:
+          - {label: "Title", name: "title", widget: "string", default: "Jenny Werners Illustration"}
+          - {label: "Description", name: "description", widget: "string", default: "Jenny Werners Portfolio Page"}
+          - {label: "Footer", name: "footer", widget: "string", default: "© 2021 Jenny Werner Illustration"}
+          - {label: "URL", name: "url", widget: "hidden", default: "https://jennywerner.netlify.app"}
+      - name: "gallery"
+        label: "Gallery Settings"
+        file: "settings/gallery.json"
+        description: "Tweak the gallery appearance"
+        fields:
+          - {label: "Rows", name: "rows", widget: "number", default: 3}
+          - {label: "Columns", name: "cols", widget: "number", default: 3}
+      - name: "footer"
+        label: "Footer Links"
+        file: "settings/footer.json"
+        description: "(Social) Links in the Footer"
+        widget: "List"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "URL", name: "url", widget: "string"}
+      - name: "menu"
+        label: "Menu Links"
+        file: "settings/menu.json"
+        description: "Configure the menu"
+        widget: "List"
+        fields:
+          - {label: "Type", name: "type", widget: "select", options: ["page", "gallery", "separator"]}
+          - {label: "Label", name: "name", widget: "string"}
+          - {label: "Slug", name: "slug", widget: "string"}
 
   - name: "galleries"
     label: "Galleries"
     folder: "galleries"
+    extension: "json"
     create: true
+    description: "Set up galleries and images"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - label: "Images"
         name: "content"
         widget: "list"
         fields:
-        - {label: "Label", name: "label", widget: "string"}
+        - {label: "Label", name: "name", widget: "string"}
         - {label: "Alt Text", name: "alt", widget: "string"}
         - {label: "Image", name: "image", widget: "image"}
 
