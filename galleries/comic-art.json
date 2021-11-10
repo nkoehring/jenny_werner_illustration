@@ -1,0 +1,15 @@
+{
+  "title": "Comic Art",
+  "content": [
+    {
+      "image": "/assets/img/dwarf_berserker.jpg",
+      "name": "Dwarf Berserker",
+      "alt": "Portrait of a Dwarf Berserker "
+    },
+    {
+      "image": "/assets/img/__charles.jpeg",
+      "name": "Pirate Charles",
+      "alt": "Portrait of a Pirate"
+    }
+  ]
+}
