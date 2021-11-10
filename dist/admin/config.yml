@@ -82,6 +82,7 @@ collections:
 
   - name: "galleries"
     label: "Galleries"
+    label_singular: "Gallery"
     folder: "galleries"
     extension: "json"
     create: true
