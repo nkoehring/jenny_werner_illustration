@@ -9,6 +9,7 @@
   "private": true,
   "devDependencies": {
     "eta": "^1.12.1",
+    "markdown-it": "^12.2.0",
     "serve": "^13.0.2"
   },
   "scripts": {

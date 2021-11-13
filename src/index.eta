@@ -187,6 +187,11 @@
       input[name="gallery-page"]:checked + .gallery-page {
         display: grid;
       }
+<% for (let item of it.menu.slice(1)) if (item.type === 'gallery' && !item.index) { %>
+      input[name="<%= item.slug %>-page"]:checked + .gallery-page {
+        display: grid;
+      }
+<% } %>
       .gallery-page {
         display: none;
         grid-template-columns: repeat(<%= it.galleryOptions.cols %>, 1fr);
@@ -299,18 +304,18 @@
           <% for (item of it.menu.slice(1)) { %>
             <% if (item.type === 'page' && !item.index) { %>
               <section name="<%= item.slug %>" id="<%= item.slug %>">
-                <%~ includeFile(`_${item.slug}`) %>
+                <%~ includeFile('_page', it.pages[item.slug]) %>
               </section>
             <% } else if (item.type === 'gallery' && !item.index) { %>
               <section name="<%= item.slug %>-gallery" class="gallery" id="<%= item.slug %>">
-                <%~ includeFile('_gallery', { slug: item.slug, images: it.gallery[item.slug], ...it.galleryOptions }) %>
+                <%~ includeFile('_gallery', { slug: item.slug, gallery: it.gallery[item.slug], ...it.galleryOptions }) %>
               </section>
             <% } %>
           <% } %>
           <% /* index page comes last, so that we can hide it with ~ css selector */ %>
           <% /* TODO: this breaks if index is a gallery */ %>
           <section name="<%= it.menu[0].slug %>" id="<%= it.menu[0].slug %>" class="index">
-            <%~ includeFile(`_${it.menu[0].slug}`) %>
+            <%~ includeFile('_page', it.pages[it.menu[0].slug]) %>
           </section>
         </div>
 

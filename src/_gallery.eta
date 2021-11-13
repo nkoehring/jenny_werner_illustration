@@ -1,21 +1,21 @@
-<% const l = it.images.length, perPage = it.rows * it.cols, pages = Math.ceil(l / perPage) %>
+<% const l = it.gallery.content.length, perPage = it.rows * it.cols, pages = Math.ceil(l / perPage), images = it.gallery.content %>
 <% for (let page = 0; page < pages; page++) { %>
   <% let start = page * perPage, end = page * perPage + perPage %>
   <% if (page === 0) { %>
-    <input type="radio" name="gallery-page" id="<%= `${it.slug}-page-${page}` %>" checked="checked" />
+    <input type="radio" name="<%= it.slug %>-page" id="<%= `${it.slug}-page-${page}` %>" checked="checked" />
   <% } else { %>
-    <input type="radio" name="gallery-page" id="<%= `${it.slug}-page-${page}` %>" />
+    <input type="radio" name="<%= it.slug %>-page" id="<%= `${it.slug}-page-${page}` %>" />
   <% } %>
   <div class="gallery-page gallery-page-<%= page %> from-<%= start %>-to-<%= end > l ? l : end %>">
     <% for (let i = start; i < end; i++) { %>
-      <% let image = it.images[i] %>
+      <% let image = images[i] %>
       <% if (image) { %>
         <%
-          let path = `/assets/img/${it.slug}/${image.name}.jpg`
-          let thumb = `/assets/img/${it.slug}/t_${image.name}.jpg`
+          let path = image.image
+          let thumb = `${image.image}?nf_resize=fit&w=163&h=163` // TODO
           let id = `${it.slug}.${image.name}`
-          let prevId = i > 0 ? `${it.slug}.${it.images[i-1].name}` : null
-          let nextId = i < l-1 ? `${it.slug}.${it.images[i+1].name}` : null
+          let prevId = i > 0 ? `${it.slug}.${images[i-1].name}` : null
+          let nextId = i < l-1 ? `${it.slug}.${images[i+1].name}` : null
         %>
         <label class="thumbnail">
           <img src="<%= thumb %>" alt="<%= image.alt %>" loading="lazy" />
