@@ -10,6 +10,36 @@
       "image": "/assets/img/starlightdragon.png",
       "alt": "Starlight Dragon",
       "name": "Starlight Dragon"
+    },
+    {
+      "image": "/assets/img/griffinflight.png",
+      "name": "Griffin Flight",
+      "alt": "Griffin Flight"
+    },
+    {
+      "image": "/assets/img/faun.png",
+      "name": "Faun",
+      "alt": "Faun"
+    },
+    {
+      "image": "/assets/img/cecropia.png",
+      "name": "Cecropia Moth",
+      "alt": "Cecropia Moth"
+    },
+    {
+      "image": "/assets/img/chameleon.png",
+      "name": "Chameleon",
+      "alt": "Chameleon"
+    },
+    {
+      "image": "/assets/img/humpbackwhale.png",
+      "name": "Humpback Whale",
+      "alt": "Humpback Whale"
+    },
+    {
+      "image": "/assets/img/robin.png",
+      "name": "Robin",
+      "alt": "Robin"
     }
   ]
 }
