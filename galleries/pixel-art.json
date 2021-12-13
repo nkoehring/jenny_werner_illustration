@@ -65,6 +65,11 @@
       "image": "/assets/img/unicorns.png",
       "name": "Unicorn Rainbow Cloud",
       "alt": "Unicorn Rainbow Cloud"
+    },
+    {
+      "image": "/assets/img/landscape1-200.png",
+      "name": "Landscape Moonlight",
+      "alt": "Landscape Moonlight"
     }
   ]
 }
