@@ -2,14 +2,29 @@
   "title": "Portraits",
   "content": [
     {
-      "image": "/assets/img/dwarf_berserker.jpg",
-      "name": "Dwarf Berserker",
-      "alt": "Portrait of a Dwarf Berserker "
+      "image": "/assets/img/torquil.png",
+      "name": "Gnome Trader",
+      "alt": "Gnome Trader"
     },
     {
-      "image": "/assets/img/__charles.jpeg",
-      "name": "Pirate Charles",
-      "alt": "Portrait of a Pirate"
+      "image": "/assets/img/jester.png",
+      "name": " Jester Lavorre",
+      "alt": " Jester Lavorre"
+    },
+    {
+      "image": "/assets/img/nottandkiri.png",
+      "name": "Nott and Kiri",
+      "alt": "Nott and Kiri"
+    },
+    {
+      "image": "/assets/img/starlight.png",
+      "name": "Elven Mage",
+      "alt": "Elven Mage"
+    },
+    {
+      "image": "/assets/img/aceanddoggi.png",
+      "name": "Warcraft Night Elf",
+      "alt": "Warcraft Night Elf"
     }
   ]
 }
