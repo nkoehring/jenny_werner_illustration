@@ -1,4 +1,4 @@
-<% const l = it.gallery.content.length, perPage = it.rows * it.cols, pages = Math.ceil(l / perPage), images = it.gallery.content %>
+<% const l = it.gallery.content.length, perPage = it.rows * it.cols, pages = Math.ceil(l / perPage), images = it.gallery.content.reverse() %>
 <% for (let page = 0; page < pages; page++) { %>
   <% let start = page * perPage, end = page * perPage + perPage %>
   <% if (page === 0) { %>
