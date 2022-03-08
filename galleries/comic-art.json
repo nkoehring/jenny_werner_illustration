@@ -40,6 +40,11 @@
       "image": "/assets/img/robin.png",
       "name": "Robin",
       "alt": "Robin"
+    },
+    {
+      "image": "/assets/img/greattitmouses.png",
+      "name": "Greattits",
+      "alt": "Greattits"
     }
   ]
 }
