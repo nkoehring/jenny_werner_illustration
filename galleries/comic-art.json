@@ -1,4 +1,70 @@
 {
   "title": "Comic Art",
-  "content": []
+  "content": [
+    {
+      "image": "/assets/img/owlchemist.png",
+      "name": "Owl Alchemist ",
+      "alt": "Owl Alchemist "
+    },
+    {
+      "image": "/assets/img/humpbackwhale.png",
+      "name": "Humpback Whale ",
+      "alt": "Humpback Whale "
+    },
+    {
+      "image": "/assets/img/chameleon.png",
+      "name": "Chamaeleon",
+      "alt": "Chamaeleon"
+    },
+    {
+      "image": "/assets/img/cecropia.png",
+      "name": "Cecropia Moth",
+      "alt": "Cecropia Moth"
+    },
+    {
+      "image": "/assets/img/rakettyponykl.png",
+      "name": "My Little Pony Style",
+      "alt": "My Little Pony Style"
+    },
+    {
+      "image": "/assets/img/lukasdoggokl.png",
+      "name": "Coffee Doggo Morning Mood",
+      "alt": "Coffee Doggo Morning Mood"
+    },
+    {
+      "image": "/assets/img/marlybella.png",
+      "name": "Dogs Pet Portrait Labradors",
+      "alt": "Dogs Pet Portrait Labradors"
+    },
+    {
+      "image": "/assets/img/starlightdragon.png",
+      "name": "Starlight Aurora Dragon",
+      "alt": "Starlight Aurora Dragon"
+    },
+    {
+      "image": "/assets/img/lighningdragon.png",
+      "name": "Lightning Dragon Flying",
+      "alt": "Lightning Dragon Flying"
+    },
+    {
+      "image": "/assets/img/griffinflight.png",
+      "name": "Griffin Flight",
+      "alt": "Griffin Flight"
+    },
+    {
+      "image": "/assets/img/robindana.png",
+      "name": "Robin Bird Bath",
+      "alt": "Robin Bird Bath"
+    },
+    {
+      "image": "/assets/img/kitties.png",
+      "name": "Cat Boys Tabby Cats ",
+      "alt": "Cat Boys Tabby Cats "
+    },
+    {
+      "image": "/assets/img/greattitmouses.png",
+      "name": "Great Tits Berries Birds",
+      "alt": "Great Tits Berries Birds"
+    }
+  ]
 }
