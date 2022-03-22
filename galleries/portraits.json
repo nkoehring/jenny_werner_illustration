@@ -1,4 +1,45 @@
 {
   "title": "Portraits",
-  "content": []
+  "content": [
+    {
+      "image": "/assets/img/aceanddoggi.png",
+      "name": "WoW Nightelf",
+      "alt": "WoW Nightelf"
+    },
+    {
+      "image": "/assets/img/jester.png",
+      "name": "Critical Role Jester Lavorre",
+      "alt": "Critical Role Jester Lavorre"
+    },
+    {
+      "image": "/assets/img/nottandkiri.png",
+      "name": "Critical Role Nott And Kiri",
+      "alt": "Critical Role Nott And Kiri"
+    },
+    {
+      "image": "/assets/img/torquil.png",
+      "name": "DnD Gnome Merchant Blacksmith Thief",
+      "alt": "DnD Gnome Merchant Blacksmith Thief"
+    },
+    {
+      "image": "/assets/img/starlight.png",
+      "name": "DnD Elf Wizard Warlock Sorcerer ",
+      "alt": "DnD Elf Wizard Warlock Sorcerer "
+    },
+    {
+      "image": "/assets/img/shirleyhalmes.png",
+      "name": "DnD Gnome Investigator Rock Thief Rogue",
+      "alt": "DnD Gnome Investigator Rock Thief Rogue"
+    },
+    {
+      "image": "/assets/img/luiswarlock.png",
+      "name": "DnD Human Warlock Magic ",
+      "alt": "DnD Human Warlock Magic "
+    },
+    {
+      "image": "/assets/img/tieflinghamster.png",
+      "name": "DnD Tiefling Fighter Necromancer Hamster ",
+      "alt": "DnD Tiefling Fighter Necromancer Hamster "
+    }
+  ]
 }
