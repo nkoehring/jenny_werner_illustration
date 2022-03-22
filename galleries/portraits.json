@@ -40,6 +40,11 @@
       "image": "/assets/img/tieflinghamster.png",
       "name": "DnD Tiefling Fighter Necromancer Hamster ",
       "alt": "DnD Tiefling Fighter Necromancer Hamster "
+    },
+    {
+      "name": "Dnd Elven Wizard",
+      "alt": "Dnd Elven Wizard",
+      "image": "/assets/img/mikhaildndelf.png"
     }
   ]
 }
