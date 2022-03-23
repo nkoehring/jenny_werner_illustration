@@ -45,6 +45,11 @@
       "name": "Owlhouse King American Beauty",
       "alt": "Owlhouse King American Beauty",
       "image": "/assets/img/americanking.png"
+    },
+    {
+      "name": "Super Animal Royal Team Fortress",
+      "alt": "Super Animal Royal Team Fortress",
+      "image": "/assets/img/tf2royal.png"
     }
   ]
 }
