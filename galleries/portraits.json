@@ -45,6 +45,11 @@
       "name": "Dnd Elven Wizard",
       "alt": "Dnd Elven Wizard",
       "image": "/assets/img/mikhaildndelf.png"
+    },
+    {
+      "name": "Nexomon Fanart",
+      "alt": "Nexomon Fanart",
+      "image": "/assets/img/nexomon.png"
     }
   ]
 }
