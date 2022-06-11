@@ -50,6 +50,11 @@
       "name": "Super Animal Royal Team Fortress",
       "alt": "Super Animal Royal Team Fortress",
       "image": "/assets/img/tf2royal.png"
+    },
+    {
+      "name": "Nexomon Fanart",
+      "alt": "Nexomon Fanart",
+      "image": "/assets/img/nexomon.png"
     }
   ]
 }
