@@ -50,6 +50,11 @@
       "name": "Nexomon Fanart",
       "alt": "Nexomon Fanart",
       "image": "/assets/img/nexomon.png"
+    },
+    {
+      "name": "Toph Beifong",
+      "alt": "Toph Beifong",
+      "image": "/assets/img/toph.png"
     }
   ]
 }
