@@ -60,6 +60,11 @@
       "name": "Toph Beifong",
       "alt": "Toph Beifong",
       "image": "/assets/img/toph.png"
+    },
+    {
+      "name": "Talespire Hydra Good Boi",
+      "alt": "Talespire Hydra Good Boi",
+      "image": "/assets/img/goodhydraboi.png"
     }
   ]
 }
