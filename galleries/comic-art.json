@@ -65,6 +65,11 @@
       "name": "Poledance Girl",
       "alt": "Poledance Girl",
       "image": "/assets/img/poledance.png"
+    },
+    {
+      "name": "Sparrows",
+      "alt": "Sparrows",
+      "image": "/assets/img/sparrowsdana.png"
     }
   ]
 }
