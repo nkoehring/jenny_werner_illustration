@@ -65,6 +65,11 @@
       "name": "Talespire Hydra Good Boi",
       "alt": "Talespire Hydra Good Boi",
       "image": "/assets/img/goodhydraboi.png"
+    },
+    {
+      "name": "Sailor Pluto",
+      "alt": "Sailor Pluto",
+      "image": "/assets/img/sailorpluto.png"
     }
   ]
 }
