@@ -75,6 +75,11 @@
       "name": "Sailor Pluto",
       "alt": "Sailor Pluto",
       "image": "/assets/img/sailorpluto.png"
+    },
+    {
+      "name": "Megumin",
+      "alt": "Megumin",
+      "image": "/assets/img/megumin.png"
     }
   ]
 }
