@@ -80,6 +80,11 @@
       "name": "Megumin",
       "alt": "Megumin",
       "image": "/assets/img/megumin.png"
+    },
+    {
+      "name": "Senko Kitsune",
+      "alt": "Senko Kitsune",
+      "image": "/assets/img/senko.png"
     }
   ]
 }
