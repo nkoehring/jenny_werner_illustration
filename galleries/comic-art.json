@@ -85,6 +85,11 @@
       "name": "Senko Kitsune",
       "alt": "Senko Kitsune",
       "image": "/assets/img/senko.png"
+    },
+    {
+      "name": "cotard abstract",
+      "alt": "cotard abstract",
+      "image": "/assets/img/cotardkl.png"
     }
   ]
 }
