@@ -80,6 +80,16 @@
       "name": "Senko Kitsune",
       "alt": "Senko Kitsune",
       "image": "/assets/img/senko.png"
+    },
+    {
+      "name": "Porovee",
+      "alt": "Porovee",
+      "image": "/assets/img/poroveeinsta1.png"
+    },
+    {
+      "name": "Pinky and Brain Talespire",
+      "alt": "Pinky and Brain Talespire",
+      "image": "/assets/img/pinkyandbrain.png"
     }
   ]
 }
