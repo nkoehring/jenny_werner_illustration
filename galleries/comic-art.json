@@ -90,6 +90,31 @@
       "name": "cotard abstract",
       "alt": "cotard abstract",
       "image": "/assets/img/cotardkl.png"
+    },
+    {
+      "image": "/assets/img/deerlex.png",
+      "name": "DeerLex",
+      "alt": "DeerLex"
+    },
+    {
+      "image": "/assets/img/poroveeinsta1.png",
+      "name": "Porovee",
+      "alt": "Porovee"
+    },
+    {
+      "image": "/assets/img/pinkyandbrain.png",
+      "name": "Pinky and Brain Talespire",
+      "alt": "Pinky and Brain Talespire"
+    },
+    {
+      "image": "/assets/img/theyseemerobin.png",
+      "name": "Robin Hood",
+      "alt": "Robin Hood"
+    },
+    {
+      "image": "/assets/img/fluffboi.png",
+      "name": "Good Boy",
+      "alt": "Good Boy"
     }
   ]
 }
