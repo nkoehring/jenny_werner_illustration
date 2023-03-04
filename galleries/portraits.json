@@ -55,6 +55,16 @@
       "name": "Toph Beifong",
       "alt": "Toph Beifong",
       "image": "/assets/img/toph.png"
+    },
+    {
+      "name": "Alister",
+      "alt": "Alister",
+      "image": "/assets/img/alisterwichtel.png"
+    },
+    {
+      "name": "DeerLex",
+      "alt": "DeerLex",
+      "image": "/assets/img/deerlex.png"
     }
   ]
 }
