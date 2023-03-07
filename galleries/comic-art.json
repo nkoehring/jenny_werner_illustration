@@ -115,6 +115,16 @@
       "image": "/assets/img/fluffboi.png",
       "name": "Good Boy",
       "alt": "Good Boy"
+    },
+    {
+      "image": "/assets/img/moonwings.png",
+      "name": "Moonwings",
+      "alt": "Moonwings"
+    },
+    {
+      "name": "Nightowl",
+      "alt": "Nightowl",
+      "image": "/assets/img/owl.png"
     }
   ]
 }
