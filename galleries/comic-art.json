@@ -120,6 +120,11 @@
       "name": "Nightowl",
       "alt": "Nightowl",
       "image": "/assets/img/owl.png"
+    },
+    {
+      "image": "/assets/img/hawk.png",
+      "name": "Sunset Hawk",
+      "alt": "Sunset Hawk"
     }
   ]
 }
