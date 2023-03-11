@@ -125,6 +125,11 @@
       "image": "/assets/img/hawk.png",
       "name": "Sunset Hawk",
       "alt": "Sunset Hawk"
+    },
+    {
+      "name": "Cardinals",
+      "alt": "Cardinals",
+      "image": "/assets/img/cardinals.png"
     }
   ]
 }
