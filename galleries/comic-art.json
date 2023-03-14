@@ -130,6 +130,11 @@
       "name": "Cardinals",
       "alt": "Cardinals",
       "image": "/assets/img/cardinals.png"
+    },
+    {
+      "name": "Thiefling",
+      "alt": "Thiefling",
+      "image": "/assets/img/thiefling.png"
     }
   ]
 }
