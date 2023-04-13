@@ -135,6 +135,11 @@
       "name": "Thiefling",
       "alt": "Thiefling",
       "image": "/assets/img/thiefling.png"
+    },
+    {
+      "name": "Water Fairy",
+      "alt": "Water Fairy",
+      "image": "/assets/img/swampguardian.png"
     }
   ]
 }
