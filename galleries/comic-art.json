@@ -140,6 +140,11 @@
       "name": "Water Fairy",
       "alt": "Water Fairy",
       "image": "/assets/img/swampguardian.png"
+    },
+    {
+      "name": "tanagers",
+      "alt": "tanagers",
+      "image": "/assets/img/tanagers.png"
     }
   ]
 }
