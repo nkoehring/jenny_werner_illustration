@@ -145,6 +145,11 @@
       "name": "tanagers",
       "alt": "tanagers",
       "image": "/assets/img/tanagers.png"
+    },
+    {
+      "name": "Koi",
+      "alt": "Koi",
+      "image": "/assets/img/koibois.png"
     }
   ]
 }
