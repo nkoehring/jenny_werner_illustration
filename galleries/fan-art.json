@@ -7,16 +7,6 @@
       "image": "/assets/img/aceanddoggi.png"
     },
     {
-      "name": "Talespire Christmas",
-      "alt": "Talespire Christmas",
-      "image": "/assets/img/christmasspire.png"
-    },
-    {
-      "name": "Talespire Goblin",
-      "alt": "Talespire Goblin",
-      "image": "/assets/img/uglygobbo.png"
-    },
-    {
       "name": "Talespire Sharknado",
       "alt": "Talespire Sharknado",
       "image": "/assets/img/sharknado.png"
@@ -90,6 +80,21 @@
       "name": "Pinky and Brain Talespire",
       "alt": "Pinky and Brain Talespire",
       "image": "/assets/img/pinkyandbrain.png"
+    },
+    {
+      "image": "/assets/img/crowdpleasers.png",
+      "name": "Super Animal Royale Crowd Pleasers",
+      "alt": "Super Animal Royale Crowd Pleasers"
+    },
+    {
+      "image": "/assets/img/deadpool5.png",
+      "name": "Dead Pool and Spidey Friend",
+      "alt": "Dead Pool and Spidey Friend"
+    },
+    {
+      "image": "/assets/img/trinity.png",
+      "name": "Super Animal Royale Trinity",
+      "alt": "Super Animal Royale Trinity"
     }
   ]
 }
