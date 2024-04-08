@@ -150,6 +150,36 @@
       "name": "Koi",
       "alt": "Koi",
       "image": "/assets/img/koibois.png"
+    },
+    {
+      "image": "/assets/img/lotlbois.png",
+      "name": "Axolotl Pond",
+      "alt": "Axolotl Pond"
+    },
+    {
+      "image": "/assets/img/caged.png",
+      "name": "Caged Werewolf",
+      "alt": "Caged Werewolf"
+    },
+    {
+      "image": "/assets/img/coleboi.png",
+      "name": "Good Boy",
+      "alt": "Good Boy"
+    },
+    {
+      "image": "/assets/img/amadeussmall.png",
+      "name": "Wolf Archer Unshaded",
+      "alt": "Wolf Archer Unshaded"
+    },
+    {
+      "image": "/assets/img/belikitty.png",
+      "name": "Sea Serpent Companion",
+      "alt": "Sea Serpent Companion"
+    },
+    {
+      "image": "/assets/img/wichtelcat.png",
+      "name": "Fullmoon Cat",
+      "alt": "Fullmoon Cat"
     }
   ]
 }
