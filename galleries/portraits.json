@@ -65,6 +65,11 @@
       "name": "DeerLex",
       "alt": "DeerLex",
       "image": "/assets/img/deerlex.png"
+    },
+    {
+      "image": "/assets/img/thiefling.png",
+      "name": "Thiefling",
+      "alt": "Thiefling"
     }
   ]
 }
